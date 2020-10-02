@@ -31,10 +31,7 @@ exports.avg = function avg(array) {
         return 0;
     }
     else {
-        let summa = array[0];
-        for (let i = 1; i < array.length; i++) {
-            summa += array[i];
-        }
+        let summa = array.reduce((total, val) => (total += val), 0);
         return summa / array.length;
     }
 
